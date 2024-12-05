@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className='h-[60vh] object-cover'>
       <div className=''>
-      {bannerImage ? <img  src={bannerImage} className='w-[100dvw] m-5 h-[40vh] sm:h-[80vh]'/> : <Loader /> }
+      {bannerImage ? <img  src={bannerImage} className='w-[100dvw]  h-[40vh] sm:h-[80vh]'/> : <Loader /> }
 
       </div>
     </div>
