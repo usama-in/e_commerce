@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="text-primary">
-      <header className="flex justify-between ml-[5rem] mr-[5rem] items-center h-[100px]">
+    <div className="text-primary sticky top-0 bg-white w-full">
+      <header className="hidden sm:flex justify-between sm:ml-[5rem] sm:mr-[5rem] items-center h-[100px]">
         <div>
           <p>E-Comm</p>
         </div>

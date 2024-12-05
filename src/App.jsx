@@ -9,11 +9,17 @@ import Sneakers from './categories/Sneakers'
 import Belt from './categories/Belt'
 import Sunglasses from './categories/Sunglases'
 import Contact from './pages/Contact'
+import { fetchData } from "./store/fetchData";
+import { bagActions } from "./store/bagSlice";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import ErrorPage from "./pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement:<ErrorPage />,
     children: [
       { index: true, element: <Home /> },
       { path: "category/bags", element: <Bags /> },
@@ -26,6 +32,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+const dispatch = useDispatch()
+
+  useEffect(()=>{
+      dispatch(fetchData())
+  },[])
   return (
     <>
       <RouterProvider router={router} />
